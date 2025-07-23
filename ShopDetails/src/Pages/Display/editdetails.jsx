@@ -19,7 +19,7 @@ const UpdateUser=()=>{
     const submitForm = async(e)=>{
         try{
         e.preventDefault()
-        const response = await axios.put(`${import.meta.env.VITE_SERVER_APP_URL}product/update/user/${id}`,user)
+        const response = await axios.put(`${import.meta.env.VITE_SERVER_APP_URL}/product/update/user/${id}`,user)
         if(response.status === 200){
             toast.success("success",{position:'top-right'})
             navigate('/users')
