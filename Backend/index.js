@@ -3,13 +3,9 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import route from './routes/DetailRoute.js'
-const corsOption ={
-    origin:process.env.APPICATION_URL,
-    methods:'GET,POST,PUT,DELETE'
-};
 const app = express()
 app.use(bodyParser.json())
-app.use(cors(corsOption))
+app.use(cors())
 
 
 const connectDb = async()=>{
