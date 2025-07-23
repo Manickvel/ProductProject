@@ -3,46 +3,9 @@ import './../../styles/user.css'
 import { useState,useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
-// import { useAuth } from '../Auth/authprovider'
 const DisplayUser=()=>{
     const navigate = useNavigate()
     const [users,setusers]= useState([]);
-    // const {logoutAction ,user} = useAuth();
-    // const handleLogout = () => {
-    //     logoutAction(); 
-    //     toast.success("Logout successfully",{position:'top-right'})
-    // }
-    // const customername = prompt("enter Your name");
-    // var count1 =0;
-    // const backdelete = async(id)=>{
-    //     count1 =1;
-    //     deleteitem(id)
-    // }
-    // const deleteproduct = async(id)=>{
-
-    // }
-    //  const configuretoast = () =>{
-    //     return(
-    //         <div>
-    //             <p>Are you sure to delete this?</p>
-    //             <button className='hover:cursor-pointer btn' id='hometoast1' onClick={backdelete}>yes</button>
-    //             <button className='hover:cursor-pointer btn'id='hometoast2' >NO</button>
-    //         </div>
-    //     )
-    // }
-    // const navigate = useNavigate()
-    // const deleteitem =async(id)=>{
-    //     toast(configuretoast())
-    //     if(count1===1){
-    //     await axios.delete(`http://localhost:4000/sms/delete/product/${id}`)
-    //     .then((response)=>{
-    //         toast.success("deleted successfully",{position:'top-right'})
-    //         window.location.reload();
-    //     }).catch((error)=>{
-    //         console.log(error)
-    //     })
-    //     }
-    // }
 
     const deleteitem = async (id) => {
     const toastId = toast(() => (
