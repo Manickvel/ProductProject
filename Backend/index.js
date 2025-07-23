@@ -3,18 +3,34 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import route from './routes/DetailRoute.js'
-
+const corsOption ={
+    origin:process.env.APPICATION_URL,
+    methods:'GET,POST,PUT,DELETE'
+};
 const app = express()
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors(corsOption))
 
-mongoose.connect("mongodb+srv://manickvel:manick@productdetaiils.5jspqdd.mongodb.net/?retryWrites=true&w=majority&appName=ProductDetaiils").then(()=>{
-    console.log("Database connected Succesfully")
-})
-.catch((error)=>console.log(error));
+
+const connectDb = async()=>{
+    try{
+        await mongoose.connect(process.env.MONGODB_URL,{
+            useNewUrlParser:true,
+            useUnifiedTopology:true
+        })
+        console.log("Db connected Successfully")
+    }catch(error){
+        console.log(error)
+    }
+}
+connectDb()
+// mongoose.connect().then(()=>{
+//     console.log("Database connected Succesfully")
+// })
+// .catch((error)=>console.log(error));
 
 app.listen(4000,()=>{
     console.log("the application is running on port 4000")
 })
 
-app.use('/sms',route)
+app.use('/',route)

@@ -111,7 +111,7 @@ const DisplayUser=()=>{
                     <th>S.No</th>
                     <th>Shop Name</th>
                     <th>Product Name</th>
-                    <th>product Id</th>
+                    <th>Product Id</th>
                     <th>Manufacture Date</th>
                     <th>Expiry Date</th>
                     <th>Price</th>
