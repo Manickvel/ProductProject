@@ -1,0 +1,79 @@
+ body{
+     background-image: url('./../assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userTable{
+    width: 95%;
+    height: 100%;
+    margin: 0px 2.5%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 20px -3px rgba(0,0,0,0.3);
+}
+.userTable:hover{
+    box-shadow: 18px 18px 30px -6px rgba(0,0,0,0.5);
+    transform: scale(1.005);
+}
+.userTable table{
+    width: 100%;
+    background: transparent;
+}
+.userTable table thead th{
+    /* background-color: darkgray; */
+    color: whitesmoke;
+    border-right: 1px solid;
+    border-bottom:1px  solid;
+}
+
+.userTable table tbody td{
+    padding: 10px;
+    color: whitesmoke;
+    /* width: 20%; */
+    text-align: center;
+    /* background-color: gainsboro; */
+    vertical-align: middle;
+    border-right: 1px solid;
+    /* border: 1px solid white ; */
+    
+}
+tr:last-child{
+    border-bottom: 1px solid white;
+}
+td:last-child:hover{
+    box-shadow: 20px 20px 30px -6px rgba(0,0,0,1);
+    transform: scale(1.1);
+}
+.btn{
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid;
+    padding: 10px;
+}
+.delete:hover{
+    cursor: pointer;
+}
+.create:hover{
+    cursor: pointer;
+    box-shadow: 20px 20px 30px -6px rgba(0,0,0,1);
+    transform: scale(1.1);
+}
+.create{
+    width:15%;
+    margin:0 43%;
+    color:white;
+    margin-top: 30px;
+}
+#hometoast1{
+    background-color: #44ed23;
+}
+#hometoast2{
+    background-color: red;
+}
+#hometoast1,#hometoast2:hover{
+    cursor: pointer;
+}

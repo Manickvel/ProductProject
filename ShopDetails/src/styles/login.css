@@ -1,0 +1,110 @@
+.main{
+    margin:0;
+    padding:0;
+    background-color: whitesmoke;
+    background-image: url('./../assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6px 0px;
+    gap:0.5rem
+
+}
+.card{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    /* background-color:#9EE0FF; */
+    padding: 2.5rem;
+    border-radius: 3px;
+    border:thick;
+    width: 24rem;
+    box-shadow: 12px 12px 20px -3px rgba(0,0,0,0.3);
+}
+/* .card1{
+    background-image: url('./../assets/images.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+/* } */
+.card:hover{
+    box-shadow: 20px 20px 30px -6px rgba(0,0,0,0.5);
+    transform: scale(1.005);
+}
+.input{
+    background-color: #CBE2F2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0.75rem;
+    margin-bottom: 10px;
+}
+.input input{
+    width: 100%;
+}
+.input:hover input{
+    transform: scale(1.025);
+    border-radius: 10%;
+}
+.content{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:whitesmoke;
+    font-size: 25px;
+    font-weight:600;
+    margin-bottom: 14px;
+    text-align: center;
+
+}
+.Text{
+    color:whitesmoke;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.submit{
+    cursor: pointer;
+    margin-left: 10%;
+    margin-right: 10%;
+    place-content: center;
+    padding: 6px;
+    width: 75%;
+    border: thick;
+    border:solid;
+    border-color: black;
+    border-radius: 0.75rem;
+}
+.submit:hover{
+    transform: scale(1.005);
+    box-shadow: 10px 13px 20px -4px rgba(0, 0, 0,0.5);
+}
+.pass{
+    cursor: pointer;
+    font-size:bold;
+    color: indigo;
+    padding:0px 20px;
+    margin-bottom: 8px;
+}
+@media(max-width:640px){
+    .container{
+        height:100%;
+        width:100%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .card{
+        width:75%;
+    }
+    .input{
+        width: 100%;
+    }
+    .card:hover{
+        transform: scale(1.005);
+    }
+}
