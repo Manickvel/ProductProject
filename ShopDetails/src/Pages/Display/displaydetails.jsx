@@ -54,7 +54,7 @@ const DisplayUser=()=>{
                         id='hometoast1'
                         onClick={async () => {
                             try {
-                                const response = await axios.delete(`${import.meta.env.VITE_SERVER_APP_URL}/delete/product/${id}`);
+                                const response = await axios.delete(`${import.meta.env.VITE_SERVER_APP_URL}delete/product/${id}`);
                                 if(response.status === 200){
                                 toast.success("Deleted successfully", { position: "top-right",delay:100000 });
                                 navigate(0)
@@ -93,7 +93,7 @@ const DisplayUser=()=>{
 
     useEffect(()=>{
         const getUsers =async()=>{
-             await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}/products`)
+             await axios.get(`${import.meta.env.VITE_SERVER_APP_URL}products`)
             .then((response)=>{
                 setusers(response.data)
             })

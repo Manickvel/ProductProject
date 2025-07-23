@@ -20,7 +20,7 @@ const AddProducts=()=>{
     const submitForm = async(e)=>{
         try{
         e.preventDefault()
-        const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}/addproduct`,user)
+        const response = await axios.post(`${import.meta.env.VITE_SERVER_APP_URL}addproduct`,user)
         if(response.status === 200){
             toast.success("success",{position:'top-right'})
             navigate('/users')
