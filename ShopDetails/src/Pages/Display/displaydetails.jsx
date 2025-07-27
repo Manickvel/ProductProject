@@ -104,7 +104,7 @@ const DisplayUser=()=>{
 
         </table>
 
-        <button type='button' onClick={()=>navigate('/adduser')}  className='btn btn-danger create'>Create User</button>
+        <button type='button' onClick={()=>navigate('/adduser')}  className='btn btn-danger create'>Add <Product></Product></button>
 
         {/* <Link to = {`/adduser`} type='button' className='create btn btn-primary'>
             Create User
