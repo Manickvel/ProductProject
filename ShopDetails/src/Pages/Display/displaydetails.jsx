@@ -83,7 +83,6 @@ const DisplayUser=()=>{
             </thead>
             <tbody>
                 {users.map((users,index)=>{
-                    console.log(users)
                     return( 
                     <tr>
                         <td>{index+1}</td>
